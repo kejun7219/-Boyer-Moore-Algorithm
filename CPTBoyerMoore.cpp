@@ -49,14 +49,14 @@ void BoyerMooreSearch(string text, string pattern) {
     int bpos[m + 1];
     int shift[m + 1];
 
-	// Initialize all occurrences of shift to 0
+    // Initialize all occurrences of shift to 0
     for (int i = 0; i < m + 1; i++) 
         shift[i] = 0;
 
     // Preprocess the pattern for bad character heuristic
     badCharHeuristic(pattern, m, badchar);
 
-	// Preprocess the pattern for strong good suffix rule
+    // Preprocess the pattern for strong good suffix rule
     preprocessStrongSuffix(shift, bpos, pattern, m);
     
     // Preprocess the pattern for good suffix rule case 2
